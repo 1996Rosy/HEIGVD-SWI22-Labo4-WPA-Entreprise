@@ -52,22 +52,23 @@ Pour réussir votre capture, vous pouvez procéder de la manière suivante :
 -   Lancer une capture avec Wireshark
 -   Etablir une connexion depuis un poste de travail (PC), un smartphone ou n'importe quel autre client WiFi. __Attention__, il est important que la connexion se fasse à 2.4 GHz pour pouvoir sniffer avec les interfaces Alfa
 - Comparer votre capture au processus d’authentification donné en théorie (n’oubliez pas les captures d'écran pour illustrer vos comparaisons !). En particulier, identifier les étapes suivantes :
-	- Requête et réponse d’authentification système ouvert
+	- Requête et réponse d’authentification système ouvert \
 	Requête
 	![](files/1.PNG)
 	Réponse
         ![](files/2.PNG)
- 	- Requête et réponse d’association (ou reassociation)
- 		Requête
+ 	- Requête et réponse d’association (ou reassociation) \
+        Requête
 	![](files/3.PNG)
 	Réponse
         ![](files/4.PNG)
-	- Négociation de la méthode d’authentification entreprise (TLS?, TTLS?, PEAP?, LEAP?, autre?)
+	- Négociation de la méthode d’authentification entreprise (TLS?, TTLS?, PEAP?, LEAP?, autre?)\
 	Proposition : l'AP propose EAP-TLS
 	![](files/proposition.PNG)
 	Réponse : la STA voudrait plutôt EAP-PEAP
 	![](files/reponse.PNG)
-	
+	Nouvelle proposition : l'AP propose alors EAP-PEAP
+	![](files/nouvelle_proposition.PNG)
 	- Phase d’initiation
 	- Phase hello :
 		- Version TLS
