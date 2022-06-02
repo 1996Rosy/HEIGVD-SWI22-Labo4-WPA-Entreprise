@@ -69,12 +69,20 @@ Pour réussir votre capture, vous pouvez procéder de la manière suivante :
 	![](files/reponse.PNG)
 	Nouvelle proposition : l'AP propose alors EAP-PEAP
 	![](files/nouvelle_proposition.PNG)
-	- Phase d’initiation
+	- Phase d’initiation/
+	![](files/5.PNG)
+	![](files/6.PNG)
 	- Phase hello :
+	![](files/hello.PNG)
 		- Version TLS
-		- Suites cryptographiques et méthodes de compression proposées par le client et acceptées par l’AP
-		- Nonces
-		- Session ID
+		![](files/tls_version.PNG)
+		- Suites cryptographiques et méthodes de compression proposées par le client et acceptées par l’AP /
+		![](files/cipher_suites.PNG)
+		- Nonces /
+		![](files/random.PNG)
+		- Session ID /
+	        ![](files/session_id.PNG)
+
 	- Phase de transmission de certificats
 	 	- Echanges des certificats
 		- Change cipher spec
