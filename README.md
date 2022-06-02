@@ -112,7 +112,7 @@ EAP-PEAP
 > 
 > **_Réponse:_** 
 Oui on peut voir l'dentité du client dans la phase d'initiation car l'authentificateur (le serveur) fait une requête d'identité au suppliant (le client).
-Cette identité sera ensuitetransmise au serveur d'authentification.
+Cette identité sera ensuite transmise au serveur d'authentification.
 ---
 
 > **_Question:_** Lors de l’échange de certificats entre le serveur d’authentification et le client :
@@ -191,12 +191,13 @@ hostapd-wpe supports the following EAP types for impersonation:
 > **_Question :_** Expliquez en quelques mots l'attaque GTC Downgrade
 > 
 > **_Réponse :_** 
-
+Lors de l'authentification avec EAP, l'utilisateur doit d'abord donner son identité. L'identité de l'utilisateur est alors associée à plusieurs méthodes d'authentification basée sur son mot de passe. Nous avons par exemple vu en cours la méthode MSCHAPv2. Le GTC downgrade consiste à associer la méthode GTC à l'utilisateur (il faut qu'il accepte) pour s'authentifier. La méthode GTC induit l'utilisateur à envoyer en plaintext son mot de passe à l'AP. Le mot de passe demandé en GTC est en réalité un one-time password, mais l'utilisateur ne sachant pas cela, il va envoyer son vrai mot de passe de connexion à l'AP
 ---
 
 > **_Question:_** Quelles sont vos conclusions et réflexions par rapport à la méthode hostapd-wpe ?
 > 
 > **_Réponse:_** 
+> La méthode GTC downgrade nous paraît plus pratique car elle n'implique pas un brute force comme la méthode hotapd-wpe qui serait suceptible d'échouer. En effet la méthode GTC-downgrade permet d'avoir directement le mot de passe en clair en trompant l'utilisateur sur la nature du mot de passe qu'il est sensé envoyer. Il va alors envoyer son propre mot de passe au lieu du one-time password demandé (en effet, si l'utilisateur voit affiché sur son écran : login: ... mot de passe: ..., il ne va pas se douter et envoyer son mot de passe)
 
 
 ### 4. En option, vous pouvez explorer d'autres outils comme [eapeak](https://github.com/rsmusllp/eapeak) ou [crEAP](https://github.com/W9HAX/crEAP/blob/master/crEAP.py) pour les garder dans votre arsenal de pentester.
