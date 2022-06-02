@@ -153,19 +153,28 @@ Pour implémenter l’attaque :
 > **_Question :_** Quelles modifications sont nécessaires dans la configuration de hostapd-wpe pour cette attaque ?
 > 
 > **_Réponse :_** 
+Il faut changer le ssid dans les options pour mettre le nom du ssid dont on veut faire un evil twin
 
 ---
 
 > **_Question:_** Quel type de hash doit-on indiquer à john ou l'outil que vous avez employé pour craquer le handshake ?
 > 
 > **_Réponse:_** 
+Avec jtr et hashcat, il faut utiliser le type NETNTLM
 
 ---
 
 > **_Question:_** Quelles méthodes d’authentification sont supportées par hostapd-wpe ?
 > 
 > **_Réponse:_**
-
+Selon la documentation :
+hostapd-wpe supports the following EAP types for impersonation:
+    1. EAP-FAST/MSCHAPv2 (Phase 0)
+    2. PEAP/MSCHAPv2
+    3. EAP-TTLS/MSCHAPv2
+    4. EAP-TTLS/MSCHAP
+    5. EAP-TTLS/CHAP
+    6. EAP-TTLS/PAP
 
 ### 3. GTC Downgrade Attack avec [EAPHammer](https://github.com/s0lst1c3/eaphammer) 
 
