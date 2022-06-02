@@ -111,21 +111,21 @@ EAP-PEAP
 > **_Question:_**Arrivez-vous à voir l’identité du client dans la phase d'initiation ? Oui ? Non ? Pourquoi ?
 > 
 > **_Réponse:_** 
-Oui on peut voir l'dentité du client.
+Oui on peut voir l'dentité du client dans la phase d'initiation car l'authentificateur (le serveur) fait une requête d'identité au suppliant (le client).
+Cette identité sera ensuitetransmise au serveur d'authentification.
 ---
 
 > **_Question:_** Lors de l’échange de certificats entre le serveur d’authentification et le client :
 > 
 > - a. Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
-
 > 
 > **_Réponse:_**
-> Oui
+Oui, car en PEAP, le client authentifie le serveur utilisant le certificat dans la phase d’établissement du tunnel TLS
 > 
 > - b. Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 > 
 > **_Réponse:_**
-> Non
+> Non, car en PEAP, le serveur authentifie le client grâce à MS-CHAP-v2 qui est un challenge-response et n'implique pas l'utilisation d'un certificat
 > 
 
 ---
