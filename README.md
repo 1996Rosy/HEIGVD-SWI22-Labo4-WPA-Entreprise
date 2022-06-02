@@ -84,10 +84,15 @@ Pour réussir votre capture, vous pouvez procéder de la manière suivante :
 	        ![](files/session_id.PNG)
 
 	- Phase de transmission de certificats
-	 	- Echanges des certificats
-		- Change cipher spec
-	- Authentification interne et transmission de la clé WPA (échange chiffré, vu par Wireshark comme « Application data »)
-	- 4-way handshake
+	 	- Echanges des certificats /
+	 	![](files/certificates.PNG) /
+		L'echange se fait entre le client hello et le server hello /
+		- Change cipher spec /
+		![](files/change_cipher.PNG)
+	- Authentification interne et transmission de la clé WPA (échange chiffré, vu par Wireshark comme « Application data ») /
+	![](files/transmission.PNG)
+	- 4-way handshake /
+	![](files/4-way.PNG)
 
 ### Répondez aux questions suivantes :
  
