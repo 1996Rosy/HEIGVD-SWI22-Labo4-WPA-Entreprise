@@ -154,13 +154,13 @@ Pour implémenter l’attaque :
 > 
 > **_Réponse :_** 
 Il faut changer le ssid dans les options pour mettre le nom du ssid dont on veut faire un evil twin
-
+(il faut aussi préciser le nom de l'interface qu'on utilise (wlan0 par exemple)).
 ---
 
 > **_Question:_** Quel type de hash doit-on indiquer à john ou l'outil que vous avez employé pour craquer le handshake ?
 > 
 > **_Réponse:_** 
-Avec jtr et hashcat, il faut utiliser le type NETNTLM
+Avec jtr et hashcat, il faut utiliser le type NETNTLM (NT password hash)
 
 ---
 
