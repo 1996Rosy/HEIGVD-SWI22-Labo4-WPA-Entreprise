@@ -99,30 +99,33 @@ Pour réussir votre capture, vous pouvez procéder de la manière suivante :
 > **_Question :_** Quelle ou quelles méthode(s) d’authentification est/sont proposé(s) au client ?
 > 
 > **_Réponse :_** 
-
+EAP-TLS est proposé par le serveur, mais le client va refuser car il préfère EAP-PEAP
 ---
 
 > **_Question:_** Quelle méthode d’authentification est finalement utilisée ?
 > 
 > **_Réponse:_** 
-
+EAP-PEAP
 ---
 
 > **_Question:_**Arrivez-vous à voir l’identité du client dans la phase d'initiation ? Oui ? Non ? Pourquoi ?
 > 
 > **_Réponse:_** 
-
+Oui on peut voir l'dentité du client.
 ---
 
 > **_Question:_** Lors de l’échange de certificats entre le serveur d’authentification et le client :
 > 
 > - a. Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
+
 > 
 > **_Réponse:_**
+> Oui
 > 
 > - b. Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 > 
 > **_Réponse:_**
+> Non
 > 
 
 ---
